@@ -1,0 +1,13 @@
+<template>
+    <!-- 1- uc adet input olusturalim -->
+    <lightning-input label="Ulke" onchange={handleUlke}></lightning-input>
+    <lightning-input label="Sehir" onchange={handleSehir}></lightning-input>
+    <lightning-input label="neyiUnlu" onchange={neyiUnlu}></lightning-input>
+
+    <!-- 6- child'i cagir ve slot name'lerini belirle -->
+    <c-ulke-sehir-detaylari>
+        <span slot="ulk">{ulke}</span>
+        <span slot="seh">{sehir}</span>
+        <span slot="unl">{unlu}</span>
+    </c-ulke-sehir-detaylari>
+</template>

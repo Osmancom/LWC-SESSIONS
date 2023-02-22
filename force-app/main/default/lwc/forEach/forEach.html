@@ -1,0 +1,28 @@
+<template>
+    
+<lightning-card title="for each dongusu"> <!-- 2- -->
+
+    <template for:each={cityList} for:item="w">  <!-- 3- for:each(bizde ki liste) kullaninca for:item(bizde ki w) kullanmak zorunludur -->
+        <p key={w}>{w}</p>
+    </template>
+
+</lightning-card>
+<!-- B- musteri listesini gormek icin card olusturalim -->
+<lightning-card title="Musteri Listesi">
+    <ul>
+        <template for:each={customerList} for:item="w">
+
+            <li key={w.id}>
+                <div>{w.id}</div>
+                <div>{w.name}</div>
+                <div>{w.phone}</div>
+                <div>{w.email}</div>
+                <img src={w.imgURL} alt="">
+            </li>
+
+        </template>
+    </ul>
+
+</lightning-card>
+
+</template>

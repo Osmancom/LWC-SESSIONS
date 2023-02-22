@@ -1,0 +1,25 @@
+<template>
+    <!-- 2- -->
+    <lightning-card title="setter">
+        <lightning-input type="number" label="Yeni yasi giriniz" onchange={updateAge}></lightning-input>
+        <lightning-button label="Yeni yasi gormek icin tiklayiniz" onclick={updateOriginalAge}></lightning-button>
+
+        <h1>Isim: {name}</h1>
+        <h1>Yas: {age}</h1>
+        <h1>Yeni Yas: {newAge}</h1>
+        <!-- 2b -->
+        <h1>getter ile yeni yas + 1 : {age1}</h1> <!-- deploy ve test -->
+    </lightning-card>
+
+    <!-- 13- card olusturalim -->
+    <lightning-card title="Parent'tan Child'a data aktarimi">
+         <!-- 14- child'i cagiralim ve deploy edelim -->
+         <!-- 15 - data child'dan geliyor. Ama biz parent'tan almak istiyoruz -->
+         <!-- 16- parent js'e git -->
+        <c-setter-child customer =  {customerDetails.name}></c-setter-child>
+         <c-setter-child customer =  {customerDetails.age}></c-setter-child>
+    </lightning-card>
+    <lightning-card title="Calculated Age">
+        <c-setter-child1 customer-age={parentAge}></c-setter-child1>
+    </lightning-card>
+</template>

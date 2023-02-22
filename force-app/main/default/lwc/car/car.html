@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Car">
+        <h1>BMW</h1>
+        <!--4- child'daki property'i override ettik fakat once child'daki api'lari eklemeliyiz -->
+        <c-car-engine motor-modeli="4.0 Turbo"></c-car-engine> <!-- carEngine'i yani container'i cagirdik -->
+
+        <!-- A- Best - Yoneticiden veri alarak dinamik hale getirecegiz -->
+        <lightning-input label="Motor Modeli" placeholder="Motor Modelini Giriniz" onchange={motor}></lightning-input>
+        <!-- D-container'i cagir ve buradan motor modelini input'la degistir -->
+        <c-car-engine motor-modeli={motorModeliDegeri}></c-car-engine> 
+    </lightning-card>
+</template>

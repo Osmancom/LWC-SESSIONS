@@ -1,0 +1,10 @@
+<template>
+    <!-- 4- Goruntuleme icin tag'leri ekleyelim -->
+    <lightning-card title="Ulke Sehir Detaylari">
+        <!-- 7- Parent'taki slotlari isimle child'da karsiladik -->
+        <h1>Ulke : <slot name="ulk"></slot></h1>
+        <h1>Sehir : <slot name="seh"></slot></h1>
+        <h1>Ney Unlu? : <slot name="unl"></slot></h1>
+    <!-- 5- Parent'taki verileri slot yardimiyla burada gosterecegiz. Parent html'e giderek child icinde slot name'leri belirleyiniz -->
+    </lightning-card>
+</template>
